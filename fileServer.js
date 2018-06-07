@@ -19,7 +19,7 @@ http.createServer(function(req, res){
           res.writeHead(200, {"Content-Type": "text/html"});
           fileStream.pipe(res);
      } else if (validTypes.includes(req.url.substring(req.url.lastIndexOf(".")))){
-          //TODO: Later down the line, make a handler for supported file types
+          //TODO 001: Later down the line, make a handler for supported file types
                //Completed on 6/6/18
           var requestPath = path.join(__dirname, "public", req.url);
 
@@ -50,7 +50,5 @@ http.createServer(function(req, res){
 
 console.log(`File server running on port ${listeningPort}`);
 
-//TODO: Later down the line, make a handler for supported file types;
-//else if (validTypes.contains(req.url.substring(lastIndexOf("."))));
-
-//var fileStream = fs.createReadStream(indexPath, "UTF-8");
+//TODO 001: Later down the line, make a handler for supported file types;
+     //Completed on 6/6/18
